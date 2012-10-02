@@ -1,7 +1,7 @@
 bgImageTween
 ============
 
-BgImageTween the smallest and fastest solution to create beautiful elements with endlesly rotating blending images in your webpages.
+BgImageTween the smallest and fastest jQuery based solution to create beautiful elements with endlesly rotating blending images in your webpages.
 
 Most image tweeining / background blending plugins out there are a great bloat. They endlesly pester you with flexibility and a wads of settings. BgImageTween does just one thing and does it right.
 
