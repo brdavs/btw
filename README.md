@@ -22,10 +22,11 @@ There shorthand:
 
 ```javascript
 $(function() {
-  $('#some.element').bgImageTween(['/your.jpg', 
-                                   '/set.jpg', 
-                                   '/of.jpg', 
-                                   '/images.jpg'], 3000, 2000 );
+  $('#some.element').bgImageTween(
+    ['/your.jpg', '/set.jpg', '/of.jpg', '/images.jpg'],
+    3000,
+    2000
+  );
 });
 ```
 
