@@ -22,11 +22,13 @@
     $(this).prepend('<div class="bgImageTweenfader"></div>');
     var fader = $('.bgImageTweenfader', this);
     
-    content.css('position', 'absolute');
-    fader.css('position', 'absolute');
-    fader.css('width', $(this).width() );
-    fader.css('height', $(this).height() );
-    fader.css('opacity', 0);
+    content.css({position: 'absolute'});
+    fader.css({
+      position: 'absolute',
+      width: $(this).width(),
+      height: $(this).height(),
+      opacity: 0
+    });
     
     n = images.shift(); images.push(n);
     $(this).css('backgroundImage', 'url('+n+')');
