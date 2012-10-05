@@ -1,6 +1,8 @@
 = 0.0.2 / 2012-10-03
   
-  * Made code tinier (726 vs 698 bytes) minified
+  * Fixed a major optimization bug
+  
+  * Made code tinier (710 vs 726 bytes) minified
 
   * Renamed the project to 'btw'
   

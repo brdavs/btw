@@ -1,5 +1,5 @@
 /*  bgImageTween, a Jquery plugin for smooth background image transition loops.
-    Copyright (C) 2010  Toni Anzlovar
+    Copyright (C) 2010-2012  Toni Anzlovar
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -14,7 +14,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 (function( $ ){
   $.fn.btw = function(images, staytime, fadetime) {
     var t = $(this);
@@ -42,14 +41,14 @@
       fader.queue(function(){
         n = images.shift(); images.push(n);
         fader.parent().css('backgroundImage', 'url('+n+")");
-        t.dequeue();
+        $(this).dequeue();
       });
       fader.delay(staytime);
       fader.animate({opacity: 0},fadetime);
       fader.queue(function(){
         n = images.shift(); images.push(n);
         fader.css('backgroundImage', 'url('+n+")", switcher() );
-        t.dequeue();
+        $(this).dequeue();
       });
     };
     switcher();
