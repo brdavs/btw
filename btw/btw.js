@@ -16,22 +16,23 @@
 */
 
 (function( $ ){
-  $.fn.bgImageTween = function(images, staytime, fadetime) {
-    $(this).wrapInner('<div class="bgImageTweenfaderContent"></div>');
-    var content = $('.bgImageTweenfaderContent', this);
-    $(this).prepend('<div class="bgImageTweenfader"></div>');
-    var fader = $('.bgImageTweenfader', this);
+  $.fn.btw = function(images, staytime, fadetime) {
+    var t = $(this);
+    t.wrapInner('<div class="btwfc"></div>');
+    var content = $('.btwfc', this);
+    t.prepend('<div class="btwf"></div>');
+    var fader = $('.btwf', this);
     
     content.css({position: 'absolute'});
     fader.css({
       position: 'absolute',
-      width: $(this).width(),
-      height: $(this).height(),
+      width: t.width(),
+      height: t.height(),
       opacity: 0
     });
     
     n = images.shift(); images.push(n);
-    $(this).css('backgroundImage', 'url('+n+')');
+    t.css('backgroundImage', 'url('+n+')');
     n= images.shift(); images.push(n);
     fader.css('backgroundImage', 'url('+n+')');
     
@@ -41,14 +42,14 @@
       fader.queue(function(){
         n = images.shift(); images.push(n);
         fader.parent().css('backgroundImage', 'url('+n+")");
-        $(this).dequeue();
+        t.dequeue();
       });
       fader.delay(staytime);
       fader.animate({opacity: 0},fadetime);
       fader.queue(function(){
         n = images.shift(); images.push(n);
         fader.css('backgroundImage', 'url('+n+")", switcher() );
-        $(this).dequeue();
+        t.dequeue();
       });
     };
     switcher();

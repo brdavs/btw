@@ -1,3 +1,9 @@
+= 0.0.2 / 2012-10-03
+  
+  * Made code tinier (726 vs 698 bytes) minified
+
+  * Renamed the project to 'btw'
+  
 = 0.0.1 / 2012-10-02
 
   * Created the rpository
