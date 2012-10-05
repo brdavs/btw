@@ -34,5 +34,6 @@ $(function() {
 ```
 
 ### Contact
+You are welcome to visit http://jqp.mutsu.org/btw for more information.  
 You may contact the author at toni [at] formalibre [dot] si.  
 Should you whish to donate to the project - the author accepts alcohol as payment.
